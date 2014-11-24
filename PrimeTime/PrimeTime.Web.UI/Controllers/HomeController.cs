@@ -16,5 +16,11 @@ namespace PrimeTime.Web.UI.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Login()
+        {
+            return new ContentResult() {Content = "Success"};
+        }
+
     }
 }

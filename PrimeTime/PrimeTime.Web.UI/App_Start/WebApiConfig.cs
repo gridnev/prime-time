@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace PrimeTime.Web.UI
 {
@@ -14,6 +15,8 @@ namespace PrimeTime.Web.UI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
         }
     }
 }
